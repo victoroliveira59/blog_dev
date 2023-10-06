@@ -14,12 +14,23 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-          <div class="col">
-        <%= yield %>
-        </div>
-      </div>
+  <div class=" bg-primary text-white text-center mb-3 p-2">
+      <%= link_to root_path, class: "text-white" do %>
+        <h1 class="display-6">Blog do Dev</h1>
+    <%end%>
+      <p class="lead">
+        Olá, aqui você entrará assuntos sobre programação, dúvidas e outros assuntos!
+      </p>
     </div>
+
+    <div class="container ">
+      <%= yield %>
+    </div>
+
+    <footer class="bg-primary text-white text-center mt-5 p-4">
+      Copyright Blog Dev <%=Date.current.year %>
+    </footer>
+
+
   </body>
 </html>
