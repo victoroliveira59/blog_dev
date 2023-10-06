@@ -1,3 +1,4 @@
 class Comment < ApplicationRecord
-  belongs_to :post
+  validates :author, :body, presence: true
+  belongs_to :post  #Relacionamento como posts
 end
