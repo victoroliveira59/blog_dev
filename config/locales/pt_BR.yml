@@ -31,8 +31,16 @@
 
 
 pt_BR:
+  author: Autor
   title: Título
   body: Corpo do post
   submit: Enviar
+  New post: Novo Post
+  Back to posts: Voltar para postar
+  Destroy this post: Excluir Post
+  Edit this post: Editar este post
+  Create new post: Criar novo post
+  Show this post: Ver este post
+  error: erro
 
 
