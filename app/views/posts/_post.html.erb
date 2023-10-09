@@ -1,1 +1,25 @@
-<%=  post.title %>
+<div class='card Bg-light mb-3'>
+  <div class='card-body'>
+    <h4><%= link_to post.title, post %></h4>
+
+    <div class='text-muted mb-2'>
+      <em> Por <%=post.author %> (<%= l(post.created_at, format: :long) %>)</em>
+    </div>
+
+
+
+    <% if params[:action] == 'show' %>
+      <p><%= post.body %></p>
+    <% else %>
+      <p><%= post.body.truncate(200) %></p>
+    <% end %>
+
+    <p class='text-muted'><%=pluralize post.comments.count, 'Comentário' %></p>
+
+
+    <%= link_to 'Ler Artigo', post, class: 'btn btn-primary' %>
+    <%= link_to 'Editar', edit_post_path(post), class: 'btn btn-secondary' %>
+    <%= button_to t("Destroy this post"), @post, method: :delete, class: 'btn btn-danger delete-post m-2 pt-2',
+        data: { confirm: 'Você tem certeza?' }, "data-post-id": post.id %>
+  </div>
+</div>
